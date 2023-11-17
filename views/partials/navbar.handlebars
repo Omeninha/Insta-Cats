@@ -1,0 +1,94 @@
+<nav>
+  <div class="menu">
+    <a href="/">
+      <img src="/assets/img/cat.png" alt="">
+    </a>
+
+    <ul class="content-navbar">
+      <li class="nav-item">
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#login">
+          Login
+        </button>
+        {{!-- <a href="/login" class="nav-link" aria-current="page">Login</a> --}}
+      </li>
+      <li class="nav-item">
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#register">
+          Register
+        </button>
+        {{!-- <a href="/register" class="nav-link" data-bs-toggle="modal" data-bs-target="#modalOpen">Register</a> --}}
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Modal LOGIN -->
+<div class="modal fade" id="login" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Login</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+        <form action="/login" method="post">
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" name="email" id="email" placeholder="EX.: fulano@email.com">
+            {{!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> --}}
+          </div>
+          <div class="mb-3">
+            <label for="password" class="form-label">Senha</label>
+            <input type="password" class="form-control" id="password">
+          </div>
+          <button type="submit" class="btn btn-primary-save">Login</button>
+
+        </form>
+
+      </div>
+      {{!-- <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+      </div> --}}
+    </div>
+  </div>
+</div>
+
+<!-- Modal REGISTER -->
+<div class="modal fade" id="register" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Register</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+        <form action="/register/create" method="post">
+          <div class="mb-3">
+            <label for="name" class="form-label">Nome</label>
+            <input type="text" class="form-control" name="name" id="name" placeholder="Ex.: Fulano de tal">
+            {{!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> --}}
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" name="email" id="email" placeholder="EX.: fulano@email.com">
+            {{!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> --}}
+          </div>
+          <div class="mb-3">
+            <label for="password" class="form-label">Senha</label>
+            <input type="password" class="form-control" name="password" id="password">
+          </div>
+          <div class="mb-3">
+            <label for="passwordconfirm" class="form-label">Confirmar Senha</label>
+            <input type="password" class="form-control" name="passwordconfirm" id="passwordconfirm">
+          </div>
+          <button type="submit" class="btn btn-primary-save">Cadastrar</button>
+        </form>
+
+      </div>
+      {{!-- <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+      </div> --}}
+    </div>
+  </div>
+</div>
